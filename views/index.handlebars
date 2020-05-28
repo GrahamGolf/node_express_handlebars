@@ -1,2 +1,32 @@
-<h1>{{burgers}}</h1>
-<button>Submit Burger</button>
+
+<ul>
+  {{#each burgers}}
+      {{#unless devoured}}
+    <li>
+  	   <p>burger_name: {{this.burger_name}}</p>
+       <p>devoured: {{this.devoured}}</p>
+       <button>Devour Burger</button>
+  	</li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+      {{#if devoured}}
+    <li>
+  	   <p>burger_name: {{this.burger_name}}</p>
+       <p>devoured: {{this.devoured}}</p>
+  	</li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<div>
+  <form action="/" method="POST">
+  	<textarea type="text" name="addburgers"></textarea>
+
+  	<button type="submit">Submit</button>
+  </form>
+</div>

@@ -1,20 +1,19 @@
 const orm = require("../config/orm.js");
 
 const burger = {
-    selectAll: function() {
-        // orm.selectAll
-        //arguements
+    selectAll: function(callback) {
+        orm.selectAll(function(res){
+            callback(res)
+        })
     },
-    insertOne: function() {
-
+    insertOne: function(burger_name, callback) {
+        orm.insertOne(burger_name, function(res){
+            callback(res)
+        })
     },
     updateOne: function() {
 
     }
 }
-
-
-
-
 
 module.exports = burger
