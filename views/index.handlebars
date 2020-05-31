@@ -5,11 +5,12 @@
     <li>
   	   <p>burger_name: {{this.burger_name}}</p>
        <p>devoured: {{this.devoured}}</p>
-       <button>Devour Burger</button>
+       <button data-id="{{this.id}}" class="devour">Devour Burger</button>
   	</li>
     {{/unless}}
   {{/each}}
 </ul>
+
 
 <ul>
   {{#each burgers}}

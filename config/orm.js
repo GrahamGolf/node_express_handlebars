@@ -9,7 +9,7 @@ const orm = {
         })
     },
     insertOne: function(burger_name, callback) {
-        const queryString = "INSERT INTO burgers";
+        let queryString = "INSERT INTO burgers";
         queryString += " (burger_name, devoured) ";
         queryString += "VALUES (";
         queryString += burger_name;
@@ -23,7 +23,7 @@ const orm = {
         })
     },
     updateOne: function(id, callback) {
-        const queryString = "UPDATE burgers SET devoured=1 ";
+        let queryString = "UPDATE burgers SET devoured=1 ";
         queryString += "WHERE id=";
         queryString += id;
         console.log(queryString)

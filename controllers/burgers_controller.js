@@ -15,8 +15,9 @@ router.post("/", function(req, res){
     })
 })
 
-router.put("/", function(req, res) {
-    burger.updateOne(req.body.id, function(burgers){
+router.put("/burger/:id", function(req, res) {
+    console.log("burgers controller", req.params.id)
+    burger.updateOne(req.params.id, function(burgers){
         if (burgers.changedRows == 0){
             return res.status(404)
         }
