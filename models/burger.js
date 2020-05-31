@@ -11,8 +11,10 @@ const burger = {
             callback(res)
         })
     },
-    updateOne: function() {
-
+    updateOne: function(id, callback) {
+        orm.updateOne(id, function(res){
+            callback(res)
+        })
     }
 }
 

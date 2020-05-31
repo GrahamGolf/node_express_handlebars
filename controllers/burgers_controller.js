@@ -16,8 +16,13 @@ router.post("/", function(req, res){
 })
 
 router.put("/", function(req, res) {
-    burger.updateOne(function(){
-
+    burger.updateOne(req.body.id, function(burgers){
+        if (burgers.changedRows == 0){
+            return res.status(404)
+        }
+        else {
+            res.status(200)
+        }
     })
 })
 

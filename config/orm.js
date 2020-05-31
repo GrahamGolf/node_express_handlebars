@@ -23,7 +23,15 @@ const orm = {
         })
     },
     updateOne: function(id, callback) {
+        const queryString = "UPDATE burgers SET devoured=1 ";
+        queryString += "WHERE id=";
+        queryString += id;
+        console.log(queryString)
 
+        connection.query (queryString, function(err, res){
+            if (err) throw err
+            callback(res)
+        })
     }
 }
 
