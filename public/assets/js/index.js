@@ -13,6 +13,23 @@ $(".devour").on( "click", function() {
           console.log("devoured")
       })
   })
+
+$(".addBurger").on("submit", function() {
+    newBurger.preventDefault();
+    let addNewBurger = {
+      burger_name: $(".addBurger").val().trim(),
+    };
+console.log(addNewBurger)
+    $.ajax({
+      url: "/burger",
+      data: addNewBurger,
+      type: "POST",
+    }).then(
+        function() {
+            console.log("Created new burger");
+            location.reload();
+      }
+    );
+  });
 })
 
-//text box is burger name and send that to create the id and set decour to 0

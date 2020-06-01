@@ -8,6 +8,7 @@ const orm = {
             callback(res)
         })
     },
+
     insertOne: function(burger_name, callback) {
         let queryString = "INSERT INTO burgers";
         queryString += " (burger_name, devoured) ";
@@ -22,6 +23,7 @@ const orm = {
             callback(res)
         })
     },
+
     updateOne: function(id, callback) {
         let queryString = "UPDATE burgers SET devoured=1 ";
         queryString += "WHERE id=";

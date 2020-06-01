@@ -24,10 +24,17 @@
 </ul>
 
 
-<div>
-  <form action="/" method="POST">
-  	<textarea type="text" name="addburgers"></textarea>
-
-  	<button type="submit">Submit</button>
-  </form>
+<div class='row mt-1'>
+    <div id = 'burgerForm' class=' col-10 mx-auto text-center'>
+        <h3>Add A New Burger!</h3>
+        <hr>
+        <div id='createBurger'>
+            <form action="/" method="POST">
+                <textarea id="addBurger" type="text" name="addBurger" cols='50'></textarea>
+                <div class = 'pb-2'>
+                <button class ='btn btn-outline-dark btn-lg addBurger' type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
